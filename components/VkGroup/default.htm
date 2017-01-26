@@ -1,0 +1,30 @@
+{% set group_id = __SELF__.property('group_id') %}
+{% set mode = __SELF__.property('mode') %}
+{% set width = __SELF__.property('width') %}
+{% set height = __SELF__.property('height') %}
+{% set color1 = __SELF__.property('color1') %}
+{% set color2 = __SELF__.property('color2') %}
+{% set color3 = __SELF__.property('color3') %}
+{% set wide = __SELF__.property('wide') %}
+
+{#<script src="//vk.com/js/api/openapi.js?137"></script>#}
+
+<figure id="vk_groups"></figure>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        VK.Widgets.Group(
+            "vk_groups",
+            {
+                mode: '{{ mode }}',
+                width: '{{ width }}',
+                height: '{{ height }}',
+                color1: '{{ color1 }}',
+                color2: '{{ color2 }}',
+                color3: '{{ color3 }}',
+                wide: '{{ wide }}'
+            },
+            '{{ group_id }}'
+        );
+    });
+</script>
