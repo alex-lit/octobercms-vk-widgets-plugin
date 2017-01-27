@@ -3,7 +3,7 @@
 return [
     'plugin' => [
             'name'        => 'VK Widgets',
-            'description' => 'Widgets for Sites'
+            'description' => 'Easy add VK Widgets'
     ],
     'vkgroup' => [
         'name' => 'Community',
