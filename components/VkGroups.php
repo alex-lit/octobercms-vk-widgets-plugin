@@ -1,12 +1,10 @@
 <?php namespace AlexLit\VkWidgets\Components;
 
-// use Cache;
 use Lang;
-// use Request;
 use Cms\Classes\ComponentBase;
 use System\Classes\ApplicationException;
 
-class VkGroup extends ComponentBase
+class VkGroups extends ComponentBase
 {
     public function componentDetails()
     {
@@ -22,12 +20,14 @@ class VkGroup extends ComponentBase
             'group_id' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.group_id.title'),
                 'type'              => 'string',
-                'default'           => '20003922',
+                'default'           => '82040219',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.group_id.description'),
-                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.group_id.placeholder')
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.group_id.placeholder'),
+                'validationPattern' => '^[0-9]*$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.group_id.validationmessage')
             ],
             'mode' => [
-                'title'             => 'Вид',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.mode.title'),
                 'type'              => 'dropdown',
                 'options'           => [
                     '3' => Lang::get('alexlit.vkwidgets::lang.vkgroup.mode.options.subscribers'),
@@ -43,8 +43,8 @@ class VkGroup extends ComponentBase
                 'default'           => 'auto',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.width.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.width.placeholder'),
-                'validationPattern' => '^[0-9auto]*$',
-                'validationMessage' => 'Поле должно быть пустым или содержать число!'
+                'validationPattern' => '^[0-9]*$|^(auto){1}$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.width.validationmessage')
             ],
             'height' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.height.title'),
@@ -52,8 +52,8 @@ class VkGroup extends ComponentBase
                 'default'           => 'auto',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.height.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.height.placeholder'),
-                'validationPattern' => '^[0-9auto]*$',
-                'validationMessage' => 'Поле должно быть пустым или содержать число!'
+                'validationPattern' => '^[0-9]*$|^(auto){1}$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.height.validationmessage')
             ],
             'color1' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.color1.title'),
@@ -61,8 +61,8 @@ class VkGroup extends ComponentBase
                 'default'           => 'FFFFFF',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color1.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color1.placeholder'),
-                'validationPattern' => '^[0-9a-zA-Z]*$',
-                'validationMessage' => 'Цвет фона должен быть в формате RRGGBB!'
+                'validationPattern' => '^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.color1.validationmessage')
             ],
             'color2' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.color2.title'),
@@ -71,7 +71,7 @@ class VkGroup extends ComponentBase
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color2.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color2.placeholder'),
                 'validationPattern' => '^[0-9a-zA-Z]*$',
-                'validationMessage' => 'Цвет текста должен быть в формате RRGGBB!'
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.color2.validationmessage')
             ],
             'color3' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.color3.title'),
@@ -80,7 +80,7 @@ class VkGroup extends ComponentBase
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color3.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkgroup.color3.placeholder'),
                 'validationPattern' => '^[0-9a-zA-Z]*$',
-                'validationMessage' => 'Цвет кнопок должен быть в формате RRGGBB!'
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkgroup.color3.validationmessage')
             ],
             'wide' => [
                 'title'             => Lang::get('alexlit.vkwidgets::lang.vkgroup.wide.title'),
