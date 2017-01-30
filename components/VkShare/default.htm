@@ -1,0 +1,30 @@
+ {% set style  = __SELF__.property('style') %}
+ {% set link   = __SELF__.property('link') %}
+ {% set text   = __SELF__.property('text') %}
+ {% set nodeId = __SELF__.property('nodeId') %}
+
+<div id="{{ nodeId }}"></div>
+
+<script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('{{ nodeId }}').innerHTML = VK.Share.button(
+            {% if link %}
+                {
+                    url: "{{ link }}"
+                },
+            {% else %}
+                false,
+            {% endif %}
+            {
+                type: "{{ style }}",
+                {% if style == 'custom' %}
+                    text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"
+                {% else %}
+                    text: "{{ text }}"
+                {% endif %}
+            }
+        );
+    });
+
+</script>
