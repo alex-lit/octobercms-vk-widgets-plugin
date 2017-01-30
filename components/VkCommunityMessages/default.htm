@@ -1,0 +1,41 @@
+{% set communityId     = __SELF__.property('communityId') %}
+{% set position        = __SELF__.property('position') %}
+{% set expandIn        = __SELF__.property('expandIn') %}
+{% set openWithSound   = __SELF__.property('openWithSound') %}
+{% set newMessageSound = __SELF__.property('newMessageSound') %}
+{% set tooltip         = __SELF__.property('tooltip') %}
+{% set tooltipText     = __SELF__.property('tooltipText') %}
+{% set elementId       = __SELF__.property('element_id') %}
+
+<div id="{{ elementId }}"></div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        VK.Widgets.CommunityMessages(
+            "{{ elementId }}",
+            {{ communityId }},
+            {
+                {% if position == 'left' %}
+                    widgetPosition: "{{ position }}",
+                {% endif %}
+                {% if expandIn == '0' %}
+                    expanded: "0",
+                {% elseif expandIn == '1' %}
+                    expanded: "1",
+                {% else %}
+                    expandTimeout: "{{ expandIn }}",
+                {% endif %}
+                {% if openWithSound == '0' %}
+                    disableExpandChatSound: "1",
+                {% endif %}
+                {% if newMessageSound == '0' %}
+                    disableNewMessagesSound: "1",
+                {% endif %}
+                {% if tooltip == '0' %}
+                    disableButtonTooltip: "1",
+                {% endif %}
+                tooltipButtonText: "{{ tooltipText }}"
+            }
+        );
+    });
+</script>
