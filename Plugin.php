@@ -21,6 +21,7 @@ class Plugin extends PluginBase
     {
         return [
            '\AlexLit\VkWidgets\Components\VkCommunity' => 'vkCommunity',
+           '\AlexLit\VkWidgets\Components\VkShare'     => 'vkShare',
         ];
     }
 }

@@ -20,7 +20,18 @@ A Community widget links your site with your VK community. Your users will be ab
 - "Name only" - display community name only
 - "News" - display community feed
 
-#Quickstart guide:
+### Share
+
+You will allow VK users to share links to your materials with their friends.
+
+**Style**
+- Button
+- Button without a counter
+- Link
+- Link without an Icon
+- Icon
+
+# Quickstart guide:
 
 1. Go to the 'System' tab in October, and install the plugin using the AlexLit.VkWidgets code.
 2. After installation has finished a new component will appear in under Octobers 'CMS > Components' tab. You have the option to add this to only one page, or add it to a layout making it appear on all pages that use the layout. Whichever you chose the instructions are the same.
