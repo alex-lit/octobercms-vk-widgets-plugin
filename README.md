@@ -31,6 +31,10 @@ You will allow VK users to share links to your materials with their friends.
 - Link without an Icon
 - Icon
 
+## Community Messages
+
+With the help of "Community Messages" widget you can create a fast tool for communication with VK users and add it to your website.
+
 # Quickstart guide:
 
 1. Go to the 'System' tab in October, and install the plugin using the AlexLit.VkWidgets code.
