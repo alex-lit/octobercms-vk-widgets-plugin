@@ -9,8 +9,8 @@ class VkCommunityMessages extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Community Messages',
-            'description' => 'With the help of "Community Messages" widget you can create a fast tool for communication with VK users and add it to your website.'
+            'name'        => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.name'),
+            'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.description')
         ];
     }
 
@@ -18,71 +18,71 @@ class VkCommunityMessages extends ComponentBase
     {
         return [
             'communityId'     => [
-                'title'       => 'Page or Group ID',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.communityid.title'),
                 'type'        => 'string',
                 'default'     => '127607773',
-                'description' => 'Community id the widget will be created for',
-                'placeholder' => 'ID'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.communityid.description'),
+                'placeholder' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.communityid.placeholder')
             ],
             'position'        => [
-                'title'       => 'Position',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.position.title'),
                 'type'        => 'dropdown',
                 'options'     => [
-                    'left'    => 'Bottom left corner',
-                    'right'   => 'Bottom right corner'
+                    'left'    => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.position.options.left'),
+                    'right'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.position.options.right')
                 ],
                 'default'     => 'right',
-                'description' => 'Button position (left or right)'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.position.description')
             ],
             'expandIn'        => [
-                'title'       => 'Expand in',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.title'),
                 'type'        => 'dropdown',
                 'options'     => [
-                    '0'       => 'Do not open',
-                    '1'       => 'Immediately',
-                    '5000'    => '5 seconds',
-                    '10000'   => '10 seconds',
-                    '15000'   => '15 seconds',
-                    '30000'   => '30 seconds',
-                    '40000'   => '40 seconds',
-                    '50000'   => '50 seconds',
-                    '60000'   => '60 seconds',
-                    '120000'  => '120 seconds'
+                    '0'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.0'),
+                    '1'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.1'),
+                    '5000'    => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.5000'),
+                    '10000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.10000'),
+                    '15000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.15000'),
+                    '30000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.30000'),
+                    '40000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.40000'),
+                    '50000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.50000'),
+                    '60000'   => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.60000'),
+                    '120000'  => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.options.120000')
                 ],
                 'default'     => '1',
-                'description' => 'Expanding widget'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.expandin.description')
             ],
             'openWithSound'   => [
-                'title'       => 'Open with sound',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.openwithsound.title'),
                 'type'        => 'checkbox',
                 'default'     => '1',
-                'description' => 'Enable sound when widget is expanding'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.openwithsound.description')
             ],
             'newMessageSound' => [
-                'title'       => 'New message sound',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.newmessagesound.title'),
                 'type'        => 'checkbox',
                 'default'     => '1',
-                'description' => 'New message notification sound'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.newmessagesound.description')
             ],
             'tooltip'         => [
-                'title'       => 'Tooltip',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltip.title'),
                 'type'        => 'checkbox',
                 'default'     => '1',
-                'description' => 'Enable a tooltip'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltip.description')
             ],
             'tooltipText'     => [
-                'title'       => 'Tooltip text',
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.title'),
                 'type'        => 'string',
-                'default'     => 'Any question?',
-                'description' => 'Community id the widget will be created for',
-                'placeholder' => 'Tooltip text'
+                'default'     => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.type'),
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.description'),
+                'placeholder' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.placeholder')
             ],
-            'element_id'     => [
-                'title'       => 'Element ID',
+            'element_id'      => [
+                'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.elementid.title'),
                 'type'        => 'string',
                 'default'     => 'vk_community_messages',
-                'description' => 'Element ID (optional)',
-                'placeholder' => 'Element ID'
+                'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.elementid.description'),
+                'placeholder' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.elementid.placeholder')
             ]
         ];
     }
