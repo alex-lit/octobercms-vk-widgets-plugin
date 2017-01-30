@@ -20,8 +20,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-           '\AlexLit\VkWidgets\Components\VkCommunity' => 'vkCommunity',
-           '\AlexLit\VkWidgets\Components\VkShare'     => 'vkShare',
+           '\AlexLit\VkWidgets\Components\VkCommunity'         => 'vkCommunity',
+           '\AlexLit\VkWidgets\Components\VkShare'             => 'vkShare',
+           '\AlexLit\VkWidgets\Components\VkCommunityMessages' => 'vkCommunityMessages',
         ];
     }
 }
