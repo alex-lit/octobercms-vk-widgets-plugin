@@ -20,7 +20,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-           '\AlexLit\VkWidgets\Components\VkGroups' => 'vkGroups',
+           '\AlexLit\VkWidgets\Components\VkCommunity' => 'vkCommunity',
         ];
     }
 }

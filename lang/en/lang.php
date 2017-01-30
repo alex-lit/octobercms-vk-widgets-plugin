@@ -5,7 +5,7 @@ return [
             'name'        => 'VK Widgets',
             'description' => 'Easy add VK Widgets'
     ],
-    'vkgroup' => [
+    'vkcommunity' => [
         'name' => 'Community',
         'description' => 'A Community widget links your site with your VK community. Your users will be able to subscribe to your VK feed without leaving the page.',
         'group_id' => [
