@@ -70,7 +70,7 @@ class VkCommunity extends ComponentBase
                 'default'           => '000000',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color2.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color2.placeholder'),
-                'validationPattern' => '^[0-9a-zA-Z]*$',
+                'validationPattern' => '^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
                 'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color2.validationmessage')
             ],
             'color3' => [
@@ -79,7 +79,7 @@ class VkCommunity extends ComponentBase
                 'default'           => '5E81A8',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color3.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color3.placeholder'),
-                'validationPattern' => '^[0-9a-zA-Z]*$',
+                'validationPattern' => '^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$',
                 'validationMessage' => Lang::get('alexlit.vkwidgets::lang.vkcommunity.color3.validationmessage')
             ],
             'wide' => [
