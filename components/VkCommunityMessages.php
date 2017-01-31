@@ -73,11 +73,11 @@ class VkCommunityMessages extends ComponentBase
             'tooltipText'     => [
                 'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.title'),
                 'type'        => 'string',
-                'default'     => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.type'),
+                'default'     => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.default'),
                 'description' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.description'),
                 'placeholder' => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.tooltiptext.placeholder')
             ],
-            'element_id'      => [
+            'elementId'      => [
                 'title'       => Lang::get('alexlit.vkwidgets::lang.vkcommunitymessages.elementid.title'),
                 'type'        => 'string',
                 'default'     => 'vk_community_messages',
