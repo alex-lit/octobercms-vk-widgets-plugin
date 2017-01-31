@@ -7,16 +7,16 @@ return [
     ],
     'vkcommunity' => [
         'name' => 'Community',
-        'description' => 'A Community widget links your site with your VK community. Your users will be able to subscribe to your VK feed without leaving the page.',
+        'description' => 'A Community widget links your site with your VK community. Your users will be able to subscribe to your VK feed without leaving the page',
         'group_id' => [
-            'title' => 'VK community ID',
+            'title' => 'Сommunity ID',
             'description' => 'VK community ID',
             'placeholder' => 'VK community ID',
             'validationmessage' => 'Field must be empty or contain integer!'
         ],
         'mode' => [
             'title' => 'Layout',
-            'description' => '"Members" - display community members, "Name only" — display community name only, "News" — display community feed.',
+            'description' => '"Members" - display community members, "Name only" — display community name only, "News" — display community feed',
             'options' => [
                 'subscribers' => 'Members',
                 'news' => 'News',
@@ -25,13 +25,13 @@ return [
         ],
         'width' => [
             'title' => 'Width',
-            'description' => 'Sets module width in pixels (integer more than 120). If value is auto it adjusts to the module width.',
+            'description' => 'Sets module width in pixels (integer more than 120). If value is auto it adjusts to the module width',
             'placeholder' => 'Module width in pixels',
             'validationmessage' => 'Field can be empty, contain a number or set to auto!'
         ],
         'height' => [
             'title' => 'Height',
-            'description' => 'Sets module height in pixels (integer from 200 to 600).',
+            'description' => 'Sets module height in pixels (integer from 200 to 600)',
             'placeholder' => 'Module height in pixels',
             'validationmessage' => 'Field can be empty, contain a number or set to auto!'
         ],
@@ -55,12 +55,17 @@ return [
         ],
         'wide' => [
             'title' => 'Wide mode',
-            'description' => 'Disabled — standard mode. Enabled — if feed is displayed, posts in this mode are displayed with the community photo and Like counts.'
+            'description' => 'Disabled — standard mode. Enabled — if feed is displayed, posts in this mode are displayed with the community photo and Like counts'
+        ],
+        'elementid' => [
+            'title' => 'Element ID',
+            'description' => 'Element ID (optional)',
+            'placeholder' => 'Element ID',
         ]
     ],
     'vkshare' => [
         'name' => 'Share',
-        'description' => 'You will allow VK users to share links to your materials with their friends.',
+        'description' => 'You will allow VK users to share links to your materials with their friends',
         'style' => [
             'title' => 'Style',
             'description' => 'Widget layout',
@@ -83,7 +88,7 @@ return [
             'description' => 'Page link (optional)',
             'placeholder' => 'Page link',
         ],
-        'nodeid' => [
+        'elementid' => [
             'title' => 'Element ID',
             'description' => 'Element ID (optional)',
             'placeholder' => 'Element ID',
@@ -91,7 +96,7 @@ return [
     ],
     'vkcommunitymessages' => [
         'name' => 'Community Messages',
-        'description' => 'With the help of "Community Messages" widget you can create a fast tool for communication with VK users and add it to your website.',
+        'description' => 'With the help of "Community Messages" widget you can create a fast tool for communication with VK users and add it to your website',
         'communityid' => [
             'title' => 'Page or Group ID',
             'description' => 'Community id the widget will be created for',
@@ -137,7 +142,7 @@ return [
         'tooltiptext' => [
             'title' => 'Tooltip text',
             'default' => 'Any question?',
-            'description' => 'Community id the widget will be created for',
+            'description' => 'Tooltip text',
             'placeholder' => 'Tooltip text'
         ],
         'elementid' => [

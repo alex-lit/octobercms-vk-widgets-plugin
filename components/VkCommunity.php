@@ -87,6 +87,13 @@ class VkCommunity extends ComponentBase
                 'type'              => 'checkbox',
                 'default'           => '0',
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.wide.description')
+            ],
+            'elementId' => [
+                'title'             => Lang::get('alexlit.vkwidgets::lang.vkcommunity.elementid.title'),
+                'type'              => 'string',
+                'default'           => 'vk_group',
+                'description'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.elementid.description'),
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkcommunity.elementid.placeholder')
             ]
         ];
     }

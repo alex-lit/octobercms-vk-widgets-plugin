@@ -44,12 +44,12 @@ class VkShare extends ComponentBase
                 'description'       => Lang::get('alexlit.vkwidgets::lang.vkshare.link.description'),
                 'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkshare.link.placeholder')
             ],
-            'nodeId' => [
-                'title'             => Lang::get('alexlit.vkwidgets::lang.vkshare.nodeid.title'),
+            'elementId' => [
+                'title'             => Lang::get('alexlit.vkwidgets::lang.vkshare.elementid.title'),
                 'type'              => 'string',
                 'default'           => 'vk-share-button',
-                'description'       => Lang::get('alexlit.vkwidgets::lang.vkshare.nodeid.description'),
-                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkshare.nodeid.placeholder')
+                'description'       => Lang::get('alexlit.vkwidgets::lang.vkshare.elementid.description'),
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.vkshare.elementid.placeholder')
             ]
         ];
     }
