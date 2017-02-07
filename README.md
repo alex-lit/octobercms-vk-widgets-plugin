@@ -1,5 +1,7 @@
 # OctoberCMS VK Widgets plugin
 
+![banner](https://raw.githubusercontent.com/web2easy/OctoberCMS-VK-Widgwts-Plugin/master/assets/images/banner.png)
+
 The compact and recognizable — add VK widgets to your site to increase visitors activity.
 
 ## Available components:
