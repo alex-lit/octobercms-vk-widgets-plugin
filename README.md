@@ -6,17 +6,21 @@ The compact and recognizable — add VK widgets to your site to increase visitor
 
 ## Available components:
 
+### "Comments"
+
+This enables VK users to comment on your materials without having to register on your site.
+
 ### "Community Messages"
 
 With the help of "Community Messages" widget you can create a fast tool for communication with VK users and add it to your website.
 
-### "Community"
-
-A Community widget links your site with your VK community. Your users will be able to subscribe to your VK feed without leaving the page.
-
 ### "Share"
 
 You will allow VK users to share links to your materials with their friends.
+
+### "Community"
+
+A Community widget links your site with your VK community. Your users will be able to subscribe to your VK feed without leaving the page.
 
 ## Available languages:
 
@@ -32,6 +36,25 @@ You will allow VK users to share links to your materials with their friends.
 5. That's it. You now have a working VK Widget on your page. It has no outside dependencies, so you don't have to worry about anything else.
 
 ## Components options
+
+### Comments
+
+#### Code:
+
+```twig
+{% component 'vkComments' %}
+```
+
+#### Options
+- **Open API ID:** Your API ID ([Get API ID](https://vk.com/apps?act=manage))
+- **Limit:** Number of comments on the page (integer 5-100)
+- **Attach:** Allows attachments in comments. String containing comma-separated types of acceptable attachments or false if media comments are disabled. Available types: graffiti, photo, audio, video, link
+- **Width:** Sets module width in pixels (integer > 300)
+- **Height:** Sets maximum height of the widget in pixels. Integer > 500. If 0, widget height is unlimited. If widget content is larger than the maximum allowed, internal scrolling appears
+- **Auto Publish:** Automatically publish the comment to the users VK page
+- **Mini Version:** Enables the mini version of the widget — smaller fonts, smaller attachment thumbnails, smaller profile pcitures in second level comments
+- **Realtime Updates:** Realtime updates for the comments
+- **URL of the page:** URL of the page, containing the widget. Comments that are automatically posted to the users VK page link to this URL, if autoPublish is enabled
 
 ### "Community Messages"
 
@@ -51,6 +74,20 @@ You will allow VK users to share links to your materials with their friends.
 - **Tooltip text:** Community id the widget will be created for
 - **Element ID:** Element ID (optional)
 
+### "Share"
+
+#### Code:
+
+```twig
+{% component 'vkShare' %}
+```
+
+#### Options
+- **Style:** Widget layout
+- **Text:** Button text
+- **Link:** Page link (optional)
+- **Element ID:** Element ID (optional)
+
 ### "Community"
 
 #### Code:
@@ -68,18 +105,4 @@ You will allow VK users to share links to your materials with their friends.
 - **Text color:** Text color in RRGGBB format
 - **Buttons color:** Button color in RRGGBB format
 - **Wide mode:** Disabled — standard mode. Enabled — if feed is displayed, posts in this mode are displayed with the community photo and Like counts
-- **Element ID:** Element ID (optional)
-
-### "Share"
-
-#### Code:
-
-```twig
-{% component 'vkShare' %}
-```
-
-#### Options
-- **Style:** Widget layout
-- **Text:** Button text
-- **Link:** Page link (optional)
 - **Element ID:** Element ID (optional)
