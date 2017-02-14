@@ -1,16 +1,14 @@
+{% set apiId       = __SELF__.property('apiId') %}
+{% set width       = __SELF__.property('width') %}
+{% set height      = __SELF__.property('height') %}
+{% set limit       = __SELF__.property('limit') %}
+{% set attach      = __SELF__.property('attach') %}
+{% set autoPublish = __SELF__.property('autoPublish') %}
+{% set mini        = __SELF__.property('mini') %}
+{% set norealtime  = __SELF__.property('norealtime') %}
+{% set pageUrl     = __SELF__.property('pageUrl') %}
 
- {% set apiId       = __SELF__.property('apiId') %}
- {% set width       = __SELF__.property('width') %}
- {% set height      = __SELF__.property('height') %}
- {% set limit       = __SELF__.property('limit') %}
- {% set attach      = __SELF__.property('attach') %}
- {% set autoPublish = __SELF__.property('autoPublish') %}
- {% set mini        = __SELF__.property('mini') %}
- {% set norealtime  = __SELF__.property('norealtime') %}
- {% set pageUrl     = __SELF__.property('pageUrl') %}
- {% set elementId   = __SELF__.property('elementId') %}
-
-<div id="{{ elementId }}"></div>
+<div id="{{ __SELF__ }}"></div>
 
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
@@ -18,7 +16,7 @@
             apiId:       {{ apiId }},
             onlyWidgets: true
         });
-        VK.Widgets.Comments("{{ elementId }}", {
+        VK.Widgets.Comments("{{ __SELF__ }}", {
             width:       '{{ width }}',
             height:      '{{ height }}',
             limit:       {{ limit }},

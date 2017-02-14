@@ -9,8 +9,8 @@ class Comments extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Комментарии',
-            'description' => 'Виджет предоставляет возможность за несколько минут установить на сайт полнофункциональный блок для комментирования.'
+            'name'        => Lang::get('alexlit.vkwidgets::lang.comments.name'),
+            'description' => Lang::get('alexlit.vkwidgets::lang.comments.description')
         ];
     }
 
@@ -18,85 +18,83 @@ class Comments extends ComponentBase
     {
         return [
             'apiId'                 => [
-                'title'             => 'Open API ID',
-                'type'              => 'string',
-                'default'           => '3631946',
-                'description'       => 'Ваш API ID',
-                'placeholder'       => 'API ID',
-                'validationPattern' => '^[0-9]+$',
-                'validationMessage' => 'Open API ID должен быть числом!'
-            ],
-            'width'                 => [
-                'title'             => 'Ширина блока в пикселах',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.apiId.title'),
                 'type'              => 'string',
                 'default'           => '',
-                'description'       => 'Минимальное значение: 300. Если параметр не указан, виджет займет всю доступную ширину',
-                'placeholder'       => 'Width',
-                'validationPattern' => '^[0-9]*$',
-                'validationMessage' => 'Ширина блока должен быть числом!'
-            ],
-            'height'                => [
-                'title'             => 'Высота блока в пикселах',
-                'type'              => 'string',
-                'default'           => '0',
-                'description'       => 'Минимальное значение: 500. Если height = 0, то высота не ограничена. Если высота содержимого виджета больше максимально допустимой, появляется внутренняя прокрутка',
-                'placeholder'       => 'Height',
-                'validationPattern' => '^[0-9]*$',
-                'validationMessage' => 'Высота блока должен быть числом!'
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.apiId.description'),
+                'placeholder'       => 'API ID',
+                'validationPattern' => '^[0-9]+$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.comments.apiId.validationMessage')
             ],
             'limit'                 => [
-                'title'             => 'Возможные типы вложений',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.limit.title'),
                 'type'              => 'string',
                 'default'           => '10',
-                'description'       => 'Минимальное значение: 5, максимальное значение: 100',
-                'placeholder'       => 'Limit',
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.limit.description'),
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.comments.limit.placeholder'),
                 'validationPattern' => '^[0-9]*$',
-                'validationMessage' => 'Число комментариев должно быть числом!'
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.comments.limit.validationMessage')
             ],
             'attach'                => [
-                'title'             => 'Возможные типы вложений',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.attach.title'),
                 'type'              => 'string',
                 'default'           => '*',
-                'description'       => 'Определяет состав меню «Прикрепить». Строка, содержащая перечисленные через запятую типы допустимых прикреплений либо false в случае отключения этой функции. Возможные типы: graffiti, photo, audio, video, link. Значение "*" включает все типы',
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.attach.description'),
                 'placeholder'       => 'graffiti, photo, audio, video, link, *'
             ],
+            'width'                 => [
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.width.title'),
+                'type'              => 'string',
+                'default'           => '',
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.width.description'),
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.comments.width.placeholder'),
+                'validationPattern' => '^[0-9]*$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.comments.width.validationMessage')
+            ],
+            'height'                => [
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.height.title'),
+                'type'              => 'string',
+                'default'           => '0',
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.height.description'),
+                'placeholder'       => Lang::get('alexlit.vkwidgets::lang.comments.height.placeholder'),
+                'validationPattern' => '^[0-9]*$',
+                'validationMessage' => Lang::get('alexlit.vkwidgets::lang.comments.height.validationMessage'),
+                'group'             => Lang::get('alexlit.vkwidgets::lang.comments.height.group')
+            ],
             'autoPublish'           => [
-                'title'             => 'Aвтоматическая публикация',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.autoPublish.title'),
                 'type'              => 'checkbox',
                 'default'           => '0',
-                'description'       => 'Aвтоматическая публикация комментария на странице пользователя'
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.autoPublish.title'),
+                'group'             => Lang::get('alexlit.vkwidgets::lang.comments.autoPublish.group')
             ],
             'mini'                  => [
-                'title'             => 'Минималистичный вид блока',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.mini.title'),
                 'type'              => 'dropdown',
                 'options'           => [
-                    '0'             => 'отключен',
-                    '1'             => 'включен',
-                    'auto'          => 'автоматически'
+                    '0'             => Lang::get('alexlit.vkwidgets::lang.comments.mini.options.0'),
+                    '1'             => Lang::get('alexlit.vkwidgets::lang.comments.mini.options.1'),
+                    'auto'          => Lang::get('alexlit.vkwidgets::lang.comments.mini.options.auto')
                 ],
 
                 'default'           => 'auto',
-                'description'       => 'Уменьшенный шрифт, уменьшенные миниатюры прикреплений, уменьшенные профильные изображения для комментариев второго уровня'
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.mini.description'),
+                'group'             => Lang::get('alexlit.vkwidgets::lang.comments.mini.group')
             ],
             'norealtime'            => [
-                'title'             => 'Real-time обновление комментариев',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.norealtime.title'),
                 'type'              => 'checkbox',
                 'default'           => '0',
-                'description'       => 'Обновление ленты комментариев в режиме реального времени'
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.norealtime.description'),
+                'group'             => Lang::get('alexlit.vkwidgets::lang.comments.norealtime.group')
             ],
             'pageUrl'               => [
-                'title'             => 'URL страницы',
+                'title'             => Lang::get('alexlit.vkwidgets::lang.comments.pageUrl.title'),
                 'type'              => 'string',
                 'default'           => '',
-                'description'       => 'URL страницы, ссылка на которую будет прикреплена к комментарию при его публикации на странице ВКонтакте (опционально)',
-                'placeholder'       => 'http://site.com'
-            ],
-            'elementId'             => [
-                'title'             => 'ID виджета',
-                'type'              => 'string',
-                'default'           => 'vk_comments',
-                'description'       => 'id элемента, который будет являться контейнером для блока комментариев',
-                'placeholder'       => 'ID'
+                'description'       => Lang::get('alexlit.vkwidgets::lang.comments.pageUrl.description'),
+                'placeholder'       => 'http://site.com/test',
+                'group'             => Lang::get('alexlit.vkwidgets::lang.comments.pageUrl.group')
             ]
         ];
     }
